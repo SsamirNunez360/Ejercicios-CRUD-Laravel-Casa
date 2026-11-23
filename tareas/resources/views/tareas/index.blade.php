@@ -28,6 +28,7 @@
                     <td>{{ $tarea->fecha_limite->format('d/m/Y') }}</td>
                     <td>{{ ucfirst(str_replace('_', ' ', $tarea->estado)) }}</td>
                     <td>
+                        <a href="{{ route('tareas.edit', $tarea->id) }}">Editar</a>
                         </form>
                     </td>
                 </tr>
