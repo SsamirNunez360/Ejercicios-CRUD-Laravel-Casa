@@ -15,6 +15,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/inicio', fn () => redirect()->route('tareas.index'))->name('inicio');
 
     Route::get('/tareas', [TareaController::class, 'index'])->name('tareas.index');
+    Route::get('/tareas/crear', [TareaController::class, 'create'])->name('tareas.create');
+    Route::post('/tareas', [TareaController::class, 'store'])->name('tareas.store');
+
 
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 });

@@ -4,6 +4,7 @@
 
 @section('contenido')
     <h1>Control de tareas</h1>
+    <p><a class="boton" href="{{ route('tareas.create') }}">Crear tarea</a></p>
 
     <table>
         <thead>
